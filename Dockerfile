@@ -2,7 +2,7 @@ FROM centos:7
 
 RUN yum -y install epel-release yum-plugin-copr && \
     yum -y copr enable jasonish/suricata-beta && \
-    yum -y install suricata
+    yum -y install suricata-rust
 
 RUN suricata --build-info
 
