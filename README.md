@@ -6,13 +6,13 @@ You will most likely want to run Suricata on a network interface on
 your host machine rather than the network interfaces normally provided
 inside a container:
 
-    docker run -it --net=host jasonish/suricata -i <interface>
+    docker run -it --net=host sbrie01/suricata -i <interface>
 
 But you will probably want to see what Suricata logs, so you may want
 to start it like:
 
     docker run -it --net=host -v $(pwd)/logs:/var/log/suricata \
-		jasonish/suricata -i <interface>
+		sbrie01/suricata -i <interface>
 
 which will map the logs directory (in your current directory) to the
 Suricata log directory in the container so you can view the Suricata
@@ -28,7 +28,7 @@ For example:
 
 - Start the Suricata container with a name:
 
-    docker run -it --net=host --name=suricata jasonish/suricata -i enp3s0
+    docker run -it --net=host --name=suricata sbrie01/suricata -i enp3s0
 
 - Start a second container with volumes-from:
 
