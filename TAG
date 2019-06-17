@@ -1,1 +1,1 @@
-jasonish/suricata:latest
+sbrie01/suricata:latest
