@@ -1,11 +1,13 @@
 FROM ubuntu:18.04
 
+RUN apt -y update
+
 RUN apt -y install libpcre3-dbg libpcre3-dev autoconf \
     automake libtool libpcap-dev libnet1-dev libyaml-dev \
     libjansson4 libcap-ng-dev libmagic-dev libjansson-dev zlib1g-dev
-
 RUN apt -y install libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev
 RUN apt -y install software-properties-common
+
 RUN add-apt-repository ppa:oisf/suricata-stable
 RUN apt -y update
 
